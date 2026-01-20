@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -328,6 +327,7 @@
         .other-work-card a:hover {
             color: #4a5568;
         }
+        
         .zoho-products {
             background: rgba(26, 26, 26, 0.95);
             padding: 40px;
@@ -340,9 +340,21 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             margin-top: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .product-card {
@@ -472,7 +484,6 @@
 </head>
 
 <body>
-
 <header>
   <div class="profile-section">
     <img src="portfolio.jpeg" class="profile-img" alt="Profile picture">
