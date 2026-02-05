@@ -31,14 +31,13 @@
         pointer-events: none;
         z-index: 0;
         animation: float 20s ease-in-out infinite;
-        background-image: radial-gradient(circle 2px at 15% 20%, rgba(255,255,255,0.9), transparent),
-                          radial-gradient(circle 1px at 18% 22%, rgba(230,240,255,0.8), transparent),
-                          radial-gradient(circle 3px at 12% 18%, rgba(255,255,255,1), transparent);
+        background: radial-gradient(circle 2px at 15% 20%, rgba(255,255,255,0.9), transparent),
+                    radial-gradient(circle 1px at 18% 22%, rgba(230,240,255,0.8), transparent);
     }
 
     @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
+        0%,100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
     }
 
     .container {
@@ -69,11 +68,6 @@
         background: #4a5568;
     }
 
-    .profile-info h1 {
-        font-size: 2.5em;
-        color: white;
-    }
-
     .contact-item {
         display: flex;
         gap: 10px;
@@ -96,7 +90,6 @@
         margin: 30px 0;
         border-radius: 10px;
         border: 1px solid #333;
-        backdrop-filter: blur(10px);
     }
 
     .section-title {
@@ -106,11 +99,11 @@
         margin-top: 40px;
     }
 
-    .top-works, .Other-works {
+    .grid-cards {
         display: grid;
-        gap: 20px;
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         margin-bottom: 50px;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
     .work-card, .other-work-card {
@@ -128,13 +121,13 @@
         box-shadow: 0 8px 25px rgba(74,85,104,0.3);
     }
 
-    .work-content h3, .other-work-card h3 {
+    .work-content h3 {
         color: #fff;
         margin-bottom: 8px;
         font-size: 1em;
     }
 
-    .work-content p, .other-work-card p {
+    .work-content p {
         color: #b0b0b0;
         font-size: 0.85em;
     }
@@ -172,8 +165,6 @@
     .skill-progress {
         background: linear-gradient(90deg, #4a5568, #718096);
         height: 100%;
-        width: 0;
-        transition: width 1s ease;
     }
 
     footer {
@@ -192,7 +183,7 @@
     <div class="container">
         <div class="profile-section">
             <img src="portfolio.jpeg" alt="Profile picture" class="profile-img">
-            <div class="profile-info">
+            <div>
                 <h1>Dhanashree S</h1>
                 <div class="contact-item">
                     <span>📅</span><span>Date of Birth: July 12, 2006</span>
@@ -216,19 +207,106 @@
     </section>
 
     <h2 class="section-title">Top Works</h2>
-    <div class="top-works">
-        <!-- cards -->
+    <div class="grid-cards">
+        <a href="https://novelnovmber-60044720209.catalystserverless.in/app/index.html" target="_blank" class="work-card">
+            <div class="work-content">
+                <h3>Novel November – Coordinator & POC</h3>
+                <p>Led 20+ students, handling communication, timelines, and collaboration for smooth execution.</p>
+            </div>
+        </a>
+
+        <a href="https://workdrive.zohoexternal.in/folder/kdqtx2acbb6ac6f2845acad94480d5859b73b" target="_blank" class="work-card">
+            <div class="work-content">
+                <h3>Tharuvai Bulletin – Writer</h3>
+                <p>Write event and feature articles with engaging storytelling and clear content.</p>
+            </div>
+        </a>
+
+        <a href="https://workdrive.zohopublic.in/writer/open/kdqtx5afc1680c05d4740993bdb2d17c72c1f" target="_blank" class="work-card">
+            <div class="work-content">
+                <h3>Pinterest Market Research</h3>
+                <p>Conducted TAM-SAM-SOM analysis for market segmentation and growth insights.</p>
+            </div>
+        </a>
+
+        <a href="https://workdrive.zohopublic.in/writer/open/kdqtx26108a17c9704f27a06905c0b938bc59" target="_blank" class="work-card">
+            <div class="work-content">
+                <h3>Golden Circle Analysis – Snapchat</h3>
+                <p>Explored Snapchat’s value, purpose, and strategic engagement elements.</p>
+            </div>
+        </a>
+
+        <a href="https://workdrive.zohoexternal.in/file/kdqtx9f0c5f7e99ad4f7d8d662ad33a6814ed" target="_blank" class="work-card">
+            <div class="work-content">
+                <h3>Tharuvai Bulletin (Vol. 4) – Designer</h3>
+                <p>Designed Volume 4’s layout and visuals for a cohesive, polished look.</p>
+            </div>
+        </a>
+
+        <a href="https://workdrive.zoho.in/file/x3dyzcde028fa20234d56930dac7b28c9eb3f" target="_blank" class="work-card">
+            <div class="work-content">
+                <h3>Product Pitch Deck</h3>
+                <p>Created a clear deck outlining problem, user needs, and value proposition.</p>
+            </div>
+        </a>
     </div>
 
     <h2 class="section-title">Other Works</h2>
-    <div class="Other-works">
-        <!-- cards -->
+    <div class="grid-cards">
+        <a href="https://workdrive.zoho.in/file/095h5e33f325253e64e3a9fc5603c85aceb41" target="_blank" class="other-work-card">
+            <div class="work-content">
+                <h3>Product Tour - Zoho Sheet</h3>
+                <p>Wrote the product tour for Zoho Sheet, creating clear step-by-step instructions.</p>
+            </div>
+        </a>
+
+        <a href="https://www.blogger.com/blog/posts/6095930630957025891" target="_blank" class="other-work-card">
+            <div class="work-content">
+                <h3>Personal Blog – Writer</h3>
+                <p>I maintain Pages Remembered, writing about ideas and reflections.</p>
+            </div>
+        </a>
+
+        <a href="https://workdrive.zohopublic.in/writer/open/anv1vec66d1a8b20b4d249e1e5e2d6375c0be" target="_blank" class="other-work-card">
+            <div class="work-content">
+                <h3>Tharuvai Bulletin – Rule Book</h3>
+                <p>Created the editorial rule book to set guidelines for clarity and content standards.</p>
+            </div>
+        </a>
+
+        <a href="https://writer.zoho.in/writer/open/go70v0eaf9de38704435eb38acf1467f04876" target="_blank" class="other-work-card">
+            <div class="work-content">
+                <h3>Deprecation of SMS-Based MFA</h3>
+                <p>Explained risks, alternatives, and best practices for MFA methods.</p>
+            </div>
+        </a>
+
+        <a href="https://workdrive.zoho.in/file/8o8bp7d99498027e048b798ebdfe339d25a46" target="_blank" class="other-work-card">
+            <div class="work-content">
+                <h3>Business Model Canvas</h3>
+                <p>Created a business model canvas outlining value proposition and elements.</p>
+            </div>
+        </a>
+
+        <a href="https://workdrive.zohoexternal.in/folder/0nbaid238780ca2af4738bdfb1f208e5ca1b3" target="_blank" class="other-work-card">
+            <div class="work-content">
+                <h3>“Access Denied” – Novel November</h3>
+                <p>Wrote 2 chapters showcasing creative storytelling.</p>
+            </div>
+        </a>
+
+        <a href="https://show.zoho.in/show/open/4jc8wa1b313426ba04014bcc727b747dd1377" target="_blank" class="other-work-card">
+            <div class="work-content">
+                <h3>Business Proposal</h3>
+                <p>Created a clear business proposal outlining problem and solution.</p>
+            </div>
+        </a>
     </div>
 
     <h2 class="section-title">Zoho Products Known</h2>
     <section class="zoho-products">
         <div class="products-grid">
-            <!-- product cards -->
+            <!-- Add your product cards here just like before -->
         </div>
     </section>
 
