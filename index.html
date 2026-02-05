@@ -294,35 +294,35 @@
             color: #4a5568;
         }
 
-        .other-works {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 50px;
-        }
+        ..other-works-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* space between cards */
+  justify-content: center;
+  padding: 1rem;
+}
 
         
-        .other-work-card {
-            background: rgba(26, 26, 26, 0.95);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(74, 85, 104, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #333;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            backdrop-filter: blur(10px);
-        }
+      .other-work-card {
+  width: 240px;          /* fixed small card */
+  flex: none;            /* don’t grow */
+  padding: 16px;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 8px;
+  text-decoration: none;  /* remove underline */
+  color: #fff;
+  transition: transform .15s;
+}
         .Other-works .other-work-card {
     display: block;
     text-decoration: none;
     color: inherit;
 }
 
-.Other-works .other-work-card:hover {
-    text-decoration: none;
-    color: inherit;
+.other-work-card:hover {
+  transform: scale(1.03);
+  border-color: #777;
 }
         /* Remove underline from all card links */
 .Other-works .other-work-card {
@@ -692,9 +692,9 @@ Being dependable, open to growth, and committed to doing my best in whatever I t
     </div>
                 <div class="product-card">
                     <div class="product-icon">
-                        <img src="https://play-lh.googleusercontent.com/Pii_JuxeQCLjIKNiIBmsovTMZSOduGEGDaY8xNr0EqYBRWp_TzIRCda22zcqHpyDQnJl" alt="Zoho Forms">
+                        <img src="https://play-lh.googleusercontent.com/P23o3e-ilhbQ5QJROZR6YtAeiqbk0syMGGMxKjpRTkgcsmaN3124NMV4tzpC_3NRxw" alt="Zoho Desk">
                     </div>
-                    <h4>Zoho Forms</h4>
+                    <h4>Zoho Desk</h4>
                    
                 </div>
                 <div class="product-card">
